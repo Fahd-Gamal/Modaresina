@@ -1,0 +1,25 @@
+<!-- nav.html — shared navbar partial, injected into #site-navbar by JS/nav.js -->
+<nav class="site-nav" aria-label="التنقل الرئيسي">
+  <div class="container nav-inner">
+    <div class="nav-actions">
+      <a class="btn-nav btn-nav-primary" data-nav href="register.html"><i class="bi bi-person-plus-fill" aria-hidden="true"></i>إنشاء حساب</a>
+      <a class="btn-nav btn-nav-ghost" data-nav href="login.html"><i class="bi bi-box-arrow-in-left" aria-hidden="true"></i>تسجيل الدخول</a>
+    </div>
+    <a class="brand" href="index.html" aria-label="مدرسينا - الرئيسية">
+      <img class="brand-mark" src="IMG/logo.png" alt="" width="48" height="48" decoding="async">
+      <span class="brand-name">مدرسينا</span>
+    </a>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="تفعيل الوضع الداكن">
+        <span class="tt-stars" aria-hidden="true"></span>
+        <span class="tt-knob" aria-hidden="true"><i class="bi bi-sun-fill"></i><i class="bi bi-moon-stars-fill"></i></span>
+      </button>
+      <button class="nav-burger" id="navBurger" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="فتح القائمة"><i class="bi bi-list" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="btn-nav btn-nav-primary" data-nav href="register.html"><i class="bi bi-person-plus-fill" aria-hidden="true"></i>إنشاء حساب</a>
+    <a class="btn-nav btn-nav-ghost" data-nav href="login.html"><i class="bi bi-box-arrow-in-left" aria-hidden="true"></i>تسجيل الدخول</a>
+  </div>
+  <div class="nav-progress" aria-hidden="true"><span></span></div>
+</nav>
