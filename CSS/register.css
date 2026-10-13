@@ -1,0 +1,15 @@
+/* CSS/register.css — register-only styles (shared form/alert styles live in base.css) */
+.seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 4px; margin-top: .4rem; background: var(--chip); border: 1px solid var(--glass-border); border-radius: 14px; }
+.seg-ind { position: absolute; inset-block: 4px; inset-inline-start: 4px; width: calc(50% - 4px); background: var(--grad-primary); border-radius: 11px; box-shadow: var(--shadow-sm); transition: transform .28s cubic-bezier(.4, 0, .2, 1); }
+.seg[data-active="1"] .seg-ind { transform: translateX(-100%); }
+.seg button { position: relative; z-index: 1; background: none; border: 0; border-radius: 11px; padding: .75rem .4rem; font: inherit; font-weight: 700; font-size: .9rem; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; gap: .4rem; cursor: pointer; transition: color var(--t); }
+.seg button .bi { display: none; }
+.seg button[aria-selected="true"] { color: #fff; }
+.seg button:disabled { cursor: not-allowed; opacity: .7; }
+@media (min-width: 400px) { .seg button { font-size: 1rem; } .seg button .bi { display: inline; } }
+
+.meter { display: flex; gap: 4px; margin-top: .5rem; }
+.meter span { flex: 1; height: 4px; border-radius: 2px; background: var(--input-border); transition: background-color var(--t); }
+.meter[data-level="1"] span:nth-child(1) { background: var(--danger); }
+.meter[data-level="2"] span:nth-child(-n+2) { background: var(--brand-400); }
+.meter[data-level="3"] span { background: var(--strong); }

@@ -1,0 +1,61 @@
+/* css/footer.css — shared footer */
+.site-footer {
+  background: var(--footer-bg); border-top: 1px solid var(--glass-border);
+  margin-top: 3rem; padding-top: 2.5rem; color: var(--text);
+}
+.footer-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 992px) { .footer-grid { grid-template-columns: 1.7fr 1fr 1.2fr 1.1fr; } }
+
+.footer-col { min-width: 0; overflow-wrap: anywhere; }
+.footer-col h2 { font-size: 1.05rem; font-weight: 800; color: var(--heading); margin-bottom: .8rem; }
+.footer-brand { display: inline-flex; align-items: center; gap: .6rem; margin-bottom: .8rem; text-decoration: none; }
+.footer-brand .brand-mark { height: 44px; }
+.footer-brand span { font-weight: 800; font-size: 1.3rem; color: var(--heading); }
+.footer-col p { color: var(--muted); font-size: .95rem; margin-bottom: .6rem; }
+
+.footer-links { list-style: none; padding: 0; margin: 0; display: grid; gap: .15rem; }
+.footer-links a {
+  display: inline-block; padding: .35rem 0; min-height: 36px;
+  color: var(--text); text-decoration: none; transition: color var(--t), transform var(--t);
+}
+.footer-links a:hover { color: var(--brand-600); transform: translateX(-3px); }
+
+.contact-phone {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 48px;
+  padding: .5rem 1rem; border-radius: 12px; text-decoration: none; font-weight: 700;
+  background: var(--wa); color: #fff; direction: ltr;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.contact-phone:hover { color: #fff; transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.contact-phone .bi { font-size: 1.3rem; }
+.contact-cta { color: var(--muted); font-size: .9rem; margin-bottom: .7rem; }
+
+.credit-label { color: var(--muted); font-size: .9rem; margin-bottom: .5rem; }
+.credit-list { display: flex; flex-wrap: wrap; gap: .5rem; }
+.credit-link {
+  display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .85rem; border-radius: 999px;
+  border: 1px solid var(--glass-border); background: var(--chip);
+  color: var(--heading); text-decoration: none; font-weight: 600; font-size: .9rem;
+  transition: background-color var(--t);
+}
+.credit-link:hover { background: rgba(193, 78, 118, .16); color: var(--heading); }
+
+.footer-love { margin-top: 1rem; color: var(--muted); font-size: .9rem; display: flex; align-items: center; gap: .45rem; }
+.heart { color: var(--brand-600); display: inline-block; }
+.site-footer.in-view .heart { animation: heartbeat 1.6s ease-in-out infinite; }
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.22); } 30% { transform: scale(1); } 45% { transform: scale(1.14); } }
+
+.footer-bottom {
+  margin-top: 2rem; padding: 1.1rem 0 1.4rem; border-top: 1px solid var(--glass-border);
+  text-align: center; color: var(--muted); font-size: .88rem;
+}
+@media (prefers-reduced-motion: reduce) { .site-footer.in-view .heart { animation: none; } }
+
+/* Developer credit: names in a distinct warm accent so they stand out from the pink theme */
+.site-footer { --credit: #8A4B00; --credit-bg: rgba(242, 169, 59, .20); --credit-border: rgba(196, 118, 0, .55); --credit-hover: rgba(242, 169, 59, .34); }
+:root[data-theme="dark"] .site-footer { --credit: #FFD98A; --credit-bg: rgba(255, 217, 138, .12); --credit-border: rgba(255, 217, 138, .45); --credit-hover: rgba(255, 217, 138, .22); }
+.credit-label { color: var(--text); font-weight: 600; }
+.credit-link { color: var(--credit); background: var(--credit-bg); border-color: var(--credit-border); font-weight: 800; font-size: .95rem; }
+.credit-link:hover { color: var(--credit); background: var(--credit-hover); }
+.credit-link .bi { font-size: 1.05rem; }

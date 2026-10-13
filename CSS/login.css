@@ -1,0 +1,5 @@
+/* CSS/login.css — login-only styles (shared styles live in base.css) */
+.login-alt { text-align: center; margin: 1rem 0 0; color: var(--muted); }
+.login-alt a { font-weight: 700; }
+.login-card .auth-title { margin-top: .6rem; }
+.forgot-link { display: inline-block; margin-top: .45rem; font-size: .88rem; font-weight: 700; }
